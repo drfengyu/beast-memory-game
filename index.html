@@ -7,9 +7,15 @@
 		<meta name="color-scheme" content="light dark" />
 		<title>Beast Memory</title>
 		<script src="https://telegram.org/js/telegram-web-app.js"></script>
+		<script src="https://res.zvo.cn/translate/translate.js"></script>
 	</head>
 	<body>
 		<div id="app" class="app-root"></div>
 		<script type="module" src="/src/index.tsx"></script>
+		<script>
+  translate.setUseVersion2(); // 设置使用v2.x版本
+  translate.language.setLocal('zh-CN'); // 设置本地语种为中文
+  translate.execute(); // 进行翻译
+</script>
 	</body>
 </html>
