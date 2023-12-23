@@ -15,8 +15,8 @@
 		<script type="module" src="/src/index.tsx"></script>
 <!-- 引入多语言切换的js -->
 <script>
-	translate.selectLanguageTag.show = false; //不出现的select的选择语言
-	translate.setAutoDiscriminateLocalLanguage();
+	translate.selectLanguageTag.show = false; //不出现的select的选择
+	translate.changeLanguage("chinese_simplified");
 translate.language.setUrlParamControl(); //url参数后可以加get方式传递 language 参数的方式控制当前网页以什么语种显示
 translate.listener.start();	//开启ht
 	translate.execute();
