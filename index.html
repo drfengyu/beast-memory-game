@@ -17,6 +17,7 @@
 
 <script>
 	translate.selectLanguageTag.show = false; //不出现的select的选择语言
+	translate.setAutoDiscriminateLocalLanguage();
 	translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认就是 'chinese_simplified' 简体中文。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明
 
 translate.language.setUrlParamControl(); //url参数后可以加get方式传递 language 参数的方式控制当前网页以什么语种显示
