@@ -7,17 +7,23 @@
 		<meta name="color-scheme" content="light dark" />
 		<title>Beast Memory</title>
 		<script src="https://telegram.org/js/telegram-web-app.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/xnx3/translate@latest/translate.js/translate.min.js"></script>
 	</head>
 	<body>
-		<div id="app" class="app-root"></div>		
+		<div id="app" class="app-root"></div>
+		<script type="module" src="/src/index.tsx"></script>
 <!-- 引入多语言切换的js -->
-<script src="https://cdn.jsdelivr.net/gh/xnx3/translate@latest/translate.js/translate.min.js"></script>
+
 <script>
 	translate.selectLanguageTag.show = false; //不出现的select的选择语言
-	translate.listener.start();
+	translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认就是 'chinese_simplified' 简体中文。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明
+
+translate.language.setUrlParamControl(); //url参数后可以加get方式传递 language 参数的方式控制当前网页以什么语种显示
+
+translate.listener.start();	//开启ht
 	translate.execute();
 </script>
-		<script type="module" src="/src/index.tsx"></script>
+		
 		
 	</body>
 </html>
